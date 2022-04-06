@@ -39,14 +39,14 @@ def history(account):
         
         timestamp= timestamp.replace("#", "")
         date= str(datetime.fromtimestamp(float(timestamp)))
-        history_list.append((date, cmd))
+        history_list.append((date, cmd))                    #날짜와 입력값을 결합
     return history_list
 
 if __name__ == '__main__':
-    accouts= get_accounts()
+    accounts= get_accounts()
     
     file = open('report.txt', "w")
-    for account in accouts:        
+    for account in accounts:        
         print("계정 : ", account)
         file.write("계정 : {0}".format(account))
         
